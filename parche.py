@@ -193,13 +193,13 @@ def parche_guion2(src, dst, tr):
     o = obj[0]; raw = o.get_raw_data()
     buf = bytearray(); pos = 0; i = 0; n = 0
     while i + 4 <= len(raw):
+        # se prueba cada posición alineada; solo se salta cuando la cadena es una frase conocida
         r = leer_cadena(raw, i, 4000)
-        if r and r[0]:
-            s, fin = r
-            es = tr.get(H(s)) if texto.search(s) else None
+        if r and r[0] and texto.search(r[0]):
+            es = tr.get(H(r[0]))
             if es:
-                buf += raw[pos:i] + cadena_bytes(es); pos = fin; n += 1
-            i = fin; continue
+                buf += raw[pos:i] + cadena_bytes(es); pos = r[1]; n += 1
+                i = r[1]; continue
         i += 4
     buf += raw[pos:]
     o.set_raw_data(bytes(buf))
