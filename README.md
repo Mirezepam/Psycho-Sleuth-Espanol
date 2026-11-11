@@ -2,6 +2,22 @@
 
 Parche de traducción al español (fan) para **Psycho-Sleuth** (versión de Steam, Windows).
 
+**[⬇ Descargar el instalador](../../releases/latest)**
+
+## Capturas
+
+![Menú principal en español](capturas/menu_principal.jpg)
+
+![Menú de partida en español](capturas/menu_partida.jpg)
+
+![Advertencia inicial en español](capturas/advertencia.jpg)
+
+## Qué traduce
+
+- Todos los diálogos de la historia
+- Menús e interfaz
+- Subtítulos de los vídeos
+
 ## Instalación
 
 1. Descarga **`Instalar_Parche_Espanol.exe`** desde la sección [Releases](../../releases/latest).
